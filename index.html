@@ -8,17 +8,25 @@
   </head>
   <body>
     <div class="w-full h-screen bg-[url(/images/bg.jpg)] bg-cover">
-      <div class="flex justify-between py-6 container mx-auto px-4 ">
+      <div class="flex justify-between items-center py-6 container mx-auto px-6 ">
         <img class="h-12" src="./images/logo-02.png" alt="" />
-        <ul class="text-white flex space-x-4 cursor-pointer">
+        <ul  class="hidden md:flex text-white space-x-6 cursor-pointer">
           <li>Home</li>
           <li>Product</li>
           <li>Community</li>
           <li>Contact us</li>
         </ul>
 
+         <ul id="menu" class="hidden flex-col  space-y-6 p-6 cursor-pointer absolute left-3 top-20 bg-white/70 w-2/3 rounded-xl ">
+          <li>Home</li>
+          <li>Product</li>
+          <li>Community</li>
+          <li>Contact us</li>
+        </ul>
+
+
         <div class="flex items-center gap-2">
-          <button class=" bg-[#E2FE26] px-3 py-2 rounded-full flex items-center cursor-pointer">
+          <button class=" hidden md:flex bg-[#E2FE26] px-3 py-2 rounded-full items-center cursor-pointer">
             Wallet Connect
             <ion-icon
               class="text-xl"
@@ -26,10 +34,14 @@
             ></ion-icon>
           </button>
           <ion-icon class="text-4xl text-white cursor-pointer" name="cart-outline"></ion-icon>
+          <img id="menu-icon" class="w-12 md:hidden" src="./images/menu-icon-02-03.png" alt="">
         </div>
       </div>
     </div>
 
+
+
+    <script src="main.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
