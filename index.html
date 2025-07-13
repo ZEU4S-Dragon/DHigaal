@@ -4,42 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DHigaal</title>
-    <link rel="stylesheet" href="./CSS/output.css" />
+    <link rel="stylesheet" href="./CSS/output.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
   </head>
   <body>
-    <div class="w-full h-screen bg-[url(/images/bg.jpg)] bg-cover">
-      <div class="flex justify-between items-center py-6 container mx-auto px-6 ">
+    <div class="w-full h-[650px] md:h-[550px] bg-[url(/images/bg.jpg)] bg-cover">
+      <div
+        class="flex justify-between items-center py-6 container mx-auto px-6"
+      >
         <img class="h-12" src="./images/logo-02.png" alt="" />
-        <ul  class="hidden md:flex text-white space-x-6 cursor-pointer">
+        <ul class="hidden md:flex text-white space-x-6 cursor-pointer">
           <li>Home</li>
           <li>Product</li>
           <li>Community</li>
           <li>Contact us</li>
         </ul>
 
-         <ul id="menu" class="hidden flex-col  space-y-6 p-6 cursor-pointer absolute left-3 top-20 bg-white/70 w-2/3 rounded-xl ">
-          <li>Home</li>
+        <ul
+          id="menu"
+          class="hidden flex-col space-y-6 p-6 cursor-pointer absolute left-3 top-20 bg-white/70 w-2/3 rounded-xl "
+        >
+          <li class="">Home</li>
           <li>Product</li>
           <li>Community</li>
           <li>Contact us</li>
         </ul>
-
 
         <div class="flex items-center gap-2">
-          <button class=" hidden md:flex bg-[#E2FE26] px-3 py-2 rounded-full items-center cursor-pointer">
-            Wallet Connect
+          <button
+            class="hidden md:flex bg-[#E2FE26] px-3 py-2 rounded-full items-center cursor-pointer"
+          >Wallet Connect
+            
             <ion-icon
               class="text-xl"
               name="arrow-forward-circle-outline"
             ></ion-icon>
           </button>
-          <ion-icon class="text-4xl text-white cursor-pointer" name="cart-outline"></ion-icon>
-          <img id="menu-icon" class="w-12 md:hidden" src="./images/menu-icon-02-03.png" alt="">
+          <ion-icon
+            class="text-4xl text-white cursor-pointer"
+            name="cart-outline"
+          ></ion-icon>
+          <img
+            id="menu-icon"
+            class="w-12 md:hidden cursor-pointer"
+            src="./images/menu-icon-02-03.png"
+            alt=""
+          />
         </div>
       </div>
+
+      <div class="text-white text-center mt-12">
+        <h1 class="text-5xl md:text-[70px] font-bold font-[Roboto] py-7">Reading feeds the mind</h1>
+        <p class="text-gray-300 text-[12px] md:text-[19px] ">
+          Reading is the best way to enhance the mind and Knowledge. <br />
+          it help a person understand new ideas, acquire new skills, develop
+          their intellect.
+        </p>
+      </div>
+
+      <div class="flex md:flex-row flex-col justify-center items-center md:gap-x-4 gap-y-4 mt-9 py-7">
+        <button class="bg-[#E2FE26] py-2 px-4 rounded-full hover:scale-125 transition">Wallet Connect
+          <ion-icon
+              class="text-xl"
+              name="arrow-forward-circle-outline"
+            ></ion-icon>
+        <button class="bg-white py-2 px-4 rounded-full hover:scale-125 transition">Wallet Connect
+          <ion-icon
+              class="text-xl"
+              name="arrow-forward-circle-outline"
+            ></ion-icon>
+        </button>
+      </div>
     </div>
-
-
 
     <script src="main.js"></script>
     <script
