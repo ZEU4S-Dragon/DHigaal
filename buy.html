@@ -7,71 +7,102 @@
     <title>Document</title>
   </head>
   <body>
-    <div
-      class="flex justify-between items-center py-6 container mx-auto px-6 bg-[url(/images/bg.jpg)] bg-cover"
-    >
-      <img class="h-12" src="./images/logo-02.png" alt="" />
-      <ul class="hidden md:flex text-white space-x-6 cursor-pointer">
-        <li class="">Home</li>
-        <li>Product</li>
-        <li>Community</li>
-        <li>Contact us</li>
-      </ul>
-
-      <ul
-        id="menu"
-        class="hidden flex-col space-y-6 p-6 cursor-pointer absolute left-3 top-20 bg-white/70 w-2/3 rounded-xl"
+    <section id="header">
+      <div
+        class="flex justify-between items-center py-6 container mx-auto px-6 bg-[url(/images/bg.jpg)] bg-cover"
       >
-        <li class="">Home</li>
-        <li>Product</li>
-        <li>Community</li>
-        <li>Contact us</li>
-      </ul>
+        <img class="h-12" src="./images/logo-02.png" alt="" />
+        <ul class="hidden md:flex text-white space-x-6 cursor-pointer">
+          <li class="">Home</li>
+          <li>Product</li>
+          <li>Community</li>
+          <li>Contact us</li>
+        </ul>
 
-      <div class="flex items-center gap-2">
-        <button
-          class="hidden md:flex bg-[#E2FE26] px-3 py-2 rounded-full items-center cursor-pointer"
+        <ul
+          id="menu"
+          class="hidden flex-col space-y-6 p-6 cursor-pointer absolute left-3 top-20 bg-white/90 w-2/3 rounded-xl"
         >
-          Wallet Connect
+          <li class="">Home</li>
+          <li>Product</li>
+          <li>Community</li>
+          <li>Contact us</li>
+        </ul>
 
+        <div class="flex items-center gap-2">
+          <button
+            class="hidden md:flex bg-[#E2FE26] px-3 py-2 rounded-full items-center cursor-pointer"
+          >
+            Wallet Connect
+
+            <ion-icon
+              class="text-xl"
+              name="arrow-forward-circle-outline"
+            ></ion-icon>
+          </button>
           <ion-icon
-            class="text-xl"
-            name="arrow-forward-circle-outline"
+            class="text-4xl text-white cursor-pointer"
+            name="cart-outline"
           ></ion-icon>
-        </button>
-        <ion-icon
-          class="text-4xl text-white cursor-pointer"
-          name="cart-outline"
-        ></ion-icon>
-        <img
-          id="menu-icon"
-          class="w-12 md:hidden cursor-pointer"
-          src="./images/menu-icon-02-03.png"
-          alt=""
-        />
-      </div>
-    </div>
-
-
-
-    <div class="container mx-auto mt-5 px-6">
-      <div class="grid grid-cols-2 bg-gray-100 gap-4 ">
-        <div class="shadow-lg py-4 px-6 ">
-          <h3 id="productName" class=" font-semibold text-4xl">Light out</h3>
-          <h1 id="productAuthor" class=" font-semibold py-4 text-3xl">Author</h1>
-          <p id="productPrice" class="text-3xl text-red-400">$22</p>
-          <button class="bg-blue-500 text-white py-2 px-4 rounded mt-4">buy now</button>
-        </div>
-        <div class="shadow-lg py-4 px-6 ">
-          <img id="productImage" src="images/lightout-01.png" alt="Lights Out" class="w-full h-[500px] object-cover  mb-4" />
+          <img
+            id="menu-icon"
+            class="w-12 md:hidden cursor-pointer"
+            src="./images/menu-icon-02-03.png"
+            alt=""
+          />
         </div>
       </div>
+    </section>
 
-    </div>
-
-
-
+    <section id="buy-hero">
+      <div class="container mx-auto my-5 px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 bg-gray-100 gap-4">
+          <div class="shadow-lg py-4 px-6">
+            <h3 id="productName" class="font-semibold text-4xl">Light out</h3>
+            <h1
+              id="productAuthor"
+              class="font-semibold py-4 text-3xl text-blue-500"
+            >
+              Author
+            </h1>
+            <p id="productPrice" class="text-3xl text-red-500">$22</p>
+            <div class="flex gap-9">
+              <button
+                class="bg-blue-500 text-white py-2 px-4 rounded mt-4 cursor-pointer"
+              >
+                buy now
+              </button>
+              <button
+                class="bg-red-500 text-white py-2 px-9 rounded mt-4 cursor-pointer"
+                onclick="history.back()"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+          <div class="shadow-lg py-4 px-6">
+            <img
+              id="productImage"
+              src="images/lightout-01.png"
+              alt="Lights Out"
+              class="w-full h-[500px] object-cover mb-4"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="main.js"></script>
+    <script>
+      const productName = sessionStorage.getItem("productName");
+      const productAuthor = sessionStorage.getItem("productAuthor");
+      const productPrice = sessionStorage.getItem("productPrice");
+      const productImage = sessionStorage.getItem("productImage");
+
+      document.getElementById("productName").innerText = productName;
+      document.getElementById("productAuthor").innerText = productAuthor;
+      document.getElementById("productPrice").innerText = `$${productPrice}`;
+      document.getElementById("productImage").src = productImage;
+    </script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
